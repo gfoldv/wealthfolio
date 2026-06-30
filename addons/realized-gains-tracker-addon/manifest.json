@@ -1,0 +1,24 @@
+{
+  "id": "realized-gains-tracker-addon",
+  "name": "Realized Gains Tracker",
+  "version": "1.0.0",
+  "description": "Displays a yearly column chart of realized capital gains using FIFO cost-basis matching.",
+  "author": "Wealthfolio",
+  "main": "dist/addon.js",
+  "sdkVersion": "1.0.0",
+  "enabled": true,
+  "permissions": [
+    {
+      "category": "ui",
+      "functions": ["sidebar.addItem", "router.add"],
+      "purpose": "Add navigation items and routes"
+    },
+    {
+      "category": "activities",
+      "functions": ["getAll"],
+      "purpose": "Read activities to compute realized gains"
+    }
+  ],
+  "keywords": ["wealthfolio", "addon", "gains", "tax", "realized"],
+  "license": "MIT"
+}
