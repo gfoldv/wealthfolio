@@ -18,6 +18,9 @@ interface Props {
   ctx: AddonContext;
 }
 
+const COLOR_GAIN = 'hsl(142 71% 45%)';
+const COLOR_LOSS = 'hsl(0 72% 51%)';
+
 function formatCurrency(value: number): string {
   const abs = Math.abs(value);
   const formatted =
@@ -100,7 +103,7 @@ export function RealizedGainsCard({ ctx }: Props) {
                 {chartData.map((entry) => (
                   <Cell
                     key={entry.year}
-                    fill={entry.gain >= 0 ? 'hsl(142 71% 45%)' : 'hsl(0 72% 51%)'}
+                    fill={entry.gain >= 0 ? COLOR_GAIN : COLOR_LOSS}
                   />
                 ))}
               </Bar>
